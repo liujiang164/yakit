@@ -2249,12 +2249,8 @@ export const AuditHistoryTable: React.FC<AuditHistoryTableProps> = memo((props) 
             title: "漏洞数",
             dataIndex: "LowRiskNumber",
             render: (text, record) => {
-                const {CriticalRiskNumber, HighRiskNumber, WarnRiskNumber, LowRiskNumber} = record
-                const countNum =
-                    parseInt(CriticalRiskNumber + "") +
-                    parseInt(HighRiskNumber + "") +
-                    parseInt(WarnRiskNumber + "") +
-                    parseInt(LowRiskNumber + "")
+                const {RiskNumber} = record
+                const countNum = parseInt(RiskNumber + "") 
                 return <>{countNum !== 0 ? <YakitTag color='info'>{countNum}</YakitTag> : "-"}</>
             },
             width: 120

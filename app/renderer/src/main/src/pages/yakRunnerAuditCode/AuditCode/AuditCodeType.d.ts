@@ -170,11 +170,12 @@ export interface SSAProgramResponse {
     Language: string
     EngineVersion: string
     Recompile: boolean
-    HighRiskNumber: number
-    CriticalRiskNumber: number
-    WarnRiskNumber: number
-    LowRiskNumber: number
+    // HighRiskNumber: number
+    // CriticalRiskNumber: number
+    // WarnRiskNumber: number
+    // LowRiskNumber: number
     Id: number
+    RiskNumber: number
 }
 
 export interface AuditHistoryTableProps {
